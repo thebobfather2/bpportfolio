@@ -5,7 +5,7 @@ export default function Navigation({ currentPage, setCurrentPage }) {
     return (
         <Navbar expand="lg" className="p-2">
             <Container fluid>
-                <Navbar.Brand className="fw-semibold gradient-text heading-font fs-3" href="/" onClick={() => setCurrentPage("Home")}> Larissa Guilherme </Navbar.Brand>
+                <Navbar.Brand className="fw-semibold gradient-text heading-font fs-3" href="/" onClick={() => setCurrentPage("Home")}> Bryan Pike </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarSupportedContent" />
                 <Navbar.Collapse id="navbarSupportedContent">
                     <Nav className="me-auto mb-2 mb-lg-0">
