@@ -1,22 +1,62 @@
 import React from 'react';
-import { Container, Navbar, Nav } from 'react-bootstrap';
-
-export default function Navigation({ currentPage, setCurrentPage }) {
+function Navbar({ currentPage, handlePageChange }) {
+    console.log(currentPage);
     return (
-        <Navbar expand="lg" className="p-2">
-            <Container fluid>
-                <Navbar.Brand className="fw-semibold gradient-text heading-font fs-3" href="/" onClick={() => setCurrentPage("Home")}> Bryan Pike </Navbar.Brand>
-                <Navbar.Toggle aria-controls="navbarSupportedContent" />
-                <Navbar.Collapse id="navbarSupportedContent">
-                    <Nav className="me-auto mb-2 mb-lg-0">
-                        <Nav.Link className={`nav-link dark-accent gradient-hv mt-2 fs-5 fw-semibold ${currentPage === "About" || currentPage === "Home" ? "gradient-text" : ""}`} href="#About" onClick={() => setCurrentPage("About")}>About Me</Nav.Link>
-                        <Nav.Link className={`nav-link dark-accent gradient-hv mt-2 fs-5 fw-semibold ${currentPage === "Portfolio" ? "gradient-text" : ""}`} href="#Portfolio" onClick={() => setCurrentPage("Portfolio")}>Portfolio</Nav.Link>
-                    </Nav>          
-                    <Nav className="ms-auto mb-2 mb-lg-0 justify-content-end">
-                        <Nav.Link className={`nav-link dark-accent gradient-hv mt-2 fs-5 fw-semibold ${currentPage === "Contact" ? "gradient-text" : ""}`} href="#Contact" onClick={() => setCurrentPage("Contact")}>Contact Me</Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+        <nav>
+            <ul className="nav">
+            <li className="nav-item">
+                <a
+                    href="#home"
+                    onClick={() => handlePageChange('Home')}
+                    // This is a conditional (ternary) operator that checks to see if the current page is "Home"
+                    // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
+                    className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
+                >
+                    Home
+                </a>
+            </li>
+            <li className="nav-item">
+                <a
+                    href="#about"
+                    onClick={() => handlePageChange('About')}
+                    // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+                    className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
+                >
+                    About
+                </a>
+            </li>
+            <li className="nav-item">
+                <a
+                    href="#project"
+                    onClick={() => handlePageChange('Projects')}
+                    // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+                    className={currentPage === 'Projects' ? 'nav-link active' : 'nav-link'}
+                >
+                    Projects
+                </a>
+            </li>
+            <li className="nav-item">
+                <a
+                    href="#contact"
+                    onClick={() => handlePageChange('Contact')}
+                    // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+                    className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
+                >
+                    Contact
+                </a>
+            </li>
+            <li className="nav-item">
+                <a
+                    href="#resume"
+                    onClick={() => handlePageChange('Resume')}
+                    // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+                    className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
+                >
+                    Resume
+                </a>
+            </li>
+        </ul>
+        </nav>
     )
 }
+export default Navbar;
