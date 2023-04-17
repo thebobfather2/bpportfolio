@@ -8,6 +8,7 @@ import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
 
+
 export default function App() {
 
   const [currentPage, setCurrentPage] = useState("Home");
