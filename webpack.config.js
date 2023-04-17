@@ -5,5 +5,11 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
-  }
+  },
+  resolve: {
+    fallback: {
+      "http": require.resolve("stream-http")
+    }
+}
+  
 };
