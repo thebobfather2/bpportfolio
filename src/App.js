@@ -12,6 +12,11 @@ import Resume from './pages/Resume';
 export default function App() {
 
   const [currentPage, setCurrentPage] = useState("Home");
+
+  function handlePageChange(page) {
+    setCurrentPage(page);
+  }
+
   const renderPage = () => {
     if (currentPage === 'Home') {
       return <Home />;
@@ -28,7 +33,7 @@ export default function App() {
     return <Contact />;
   };
 
-  const handlePageChange = (page) => setCurrentPage(page);
+
 
 
   return (
