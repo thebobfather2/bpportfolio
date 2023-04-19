@@ -2,6 +2,7 @@ import bobbyrabbits from '../assets/images/bobbyrabbits.jpg';
 import carrotCalendar from '../assets/images/carrotcalendar.jpg';
 import pawpals from '../assets/images/pawpals.png';
 import vsn from '../assets/images/vsn.png';
+import tuter from '../assets/images/tuter.png';
 
 
 
@@ -33,5 +34,12 @@ export const projects = [
         repository: "https://github.com/VibeStreamNetwork/vibestreamnetwork",
         link: "https://vibestreamnetwork.io/",
         image: vsn
+    },
+    {
+        title: "Tuter",
+        description: `Tuter is a site built to connect students and tutors and to facilitate learning.`,
+        repository: "https://github.com/thebobfather2/tuterapp",
+        link: "https://tuter.herokuapp.com/",
+        image: tuter
     },
 ]
